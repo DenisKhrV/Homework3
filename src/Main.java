@@ -97,11 +97,12 @@ public class Main {
         int weightLossMax=500;
         int weightLossMin=250;
         int weightLossNeed=7000;
-        float maxDays=weightLossNeed/(float)weightLossMin;
+        double maxDays=weightLossNeed/(double)weightLossMin;
         System.out.println("Если спортсмен будет терять каждый день по 250 грамм, на похудение уйдёт " + maxDays + " дней");
-        float minDays=weightLossNeed/(float)weightLossMax;
+        double minDays=weightLossNeed/(double)weightLossMax;
         System.out.println("Если спортсмен будет терять каждый день по 500 грамм, на похудение уйдёт " + minDays + " дней");
-        float averageDays=(maxDays+minDays)/2;
+        double averageDaysLoss=(weightLossMax+weightLossMin)/2D;
+        double averageDays=(double)weightLossNeed/averageDaysLoss;
         System.out.println("В среднем для достижения результата понадобится " + averageDays + " дней");
     }
     public static void task8() {
